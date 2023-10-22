@@ -8,7 +8,7 @@ import Inventory.Productdata;
 
 /**
  *
- * @author Junxiu Wu, Yuchang Sun
+ * @author Junxiu Wu
  */
 
 public class ProductDataChild extends Productdata {

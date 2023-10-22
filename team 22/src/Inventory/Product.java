@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package Inventory;
 
 
@@ -44,4 +48,3 @@ public class Product extends Productdata {
         return String.format("%s %d", super.toString(), getCode());
     }
 }
-

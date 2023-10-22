@@ -6,7 +6,7 @@ package Inventory;
 
 /**
  *
- * @author yucha
+ * @author yuchang Sun
  */
 public class ClientSelection {
     
