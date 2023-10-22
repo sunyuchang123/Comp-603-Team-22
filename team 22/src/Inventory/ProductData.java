@@ -8,21 +8,21 @@ package Inventory;
  *
  * @author yuchang, Junxiu Wu
  */
-public abstract class ProductData {
+public abstract class Productdata {
      // Instance variables
     protected String name;
     protected double price;
     protected int quantity;
 
     // Default constructor
-    public ProductData() {
+    public Productdata() {
         setName("unknown");
         setPrice(0);
         setQuantity(0);
     }
 
     // Parameterized constructor
-    public ProductData(String name, double price, int quantity) {
+    public Productdata(String name, double price, int quantity) {
         setName(name);
         setPrice(price);
         setQuantity(quantity);

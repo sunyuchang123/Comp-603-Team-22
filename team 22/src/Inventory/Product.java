@@ -5,7 +5,7 @@ package Inventory;
  *
  * @author Junxiu Wu, Yuchang Sun
  */
-public class Product extends ProductData {
+public class Product extends Productdata {
 
     private int Code;
 
