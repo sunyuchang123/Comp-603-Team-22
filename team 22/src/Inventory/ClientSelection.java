@@ -6,13 +6,13 @@ package Inventory;
 
 /**
  *
- * @author yucha
+ * @author yuchang Sun
  */
 public class ClientSelection {
     
     public final String Selection = "Inventory";
 
-    public String getProductInfo(ProductData item) {
+    public String getProductInfo(Productdata item) {
         StringBuilder returnString = new StringBuilder();
         returnString.append("Product name: ").append(item.getName());
         returnString.append("\nProduct quantity: ").append(item.getQuantity());

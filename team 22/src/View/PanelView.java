@@ -6,7 +6,7 @@ package View;
 
 /**
  *
- * @author yucha
+ * @author yuchang Sun
  */
 public class PanelView {
     

@@ -4,14 +4,14 @@
  */
 package Inventory;
 
-import Inventory.ProductData;
+import Inventory.Productdata;
 
 /**
  *
- * @author Junxiu Wu, Yuchang Sun
+ * @author Junxiu Wu
  */
 
-public class ProductDataChild extends ProductData {
+public class ProductDataChild extends Productdata {
 
     private String inventory;
 

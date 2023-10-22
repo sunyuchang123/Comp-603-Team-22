@@ -11,7 +11,7 @@ import java.awt.Image;
 
 /**
  *
- * @author yucha
+ * @author yuchang Sun
  */
 public class BackgroundPanel extends JPanel {
       private Image backgroundImage;
