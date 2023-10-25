@@ -43,6 +43,15 @@ public class InventoryController {
         this.view = view;
         this.selection = new ClientSelection();
     }
+    
+    /**
+     * Bootstraps the inventory system, setting up the database tables and launching the GUI.
+     */
+    public void systemStart() {
+        model.createTables();
+        view.setController(this);
+        view.startGUI();
+    }
 
 
     /**
@@ -54,6 +63,15 @@ public class InventoryController {
         this.guiWindow = guiWindow;
     }
     
+    /**
+     * Safely terminates the inventory system, closing any active database connections 
+     * and shutting down the GUI.
+     */
+    public void endProgram() {
+        swapWindow(GuiWindow.NONE);
+        model.closeConnections();
+        view.dispose();
+    }
 
 
     /**
@@ -63,6 +81,16 @@ public class InventoryController {
      */
     public String[] getItemName() {
         return model.getProductNames(selection.getCurrentSelection(this));
+    }
+    
+    /**
+     * Fetches detailed information about a specific item.
+     * 
+     * @param name Name of the item.
+     * @return Detailed item information as a string.
+     */
+    public String getStringName(String name) {
+        return selection.getProductInfo(this, model.getProduct(selection.getCurrentSelection(this), name));
     }
 
     /**
@@ -92,6 +120,16 @@ public class InventoryController {
      */
     public void add(Productdata newItem) {
         model.addProduct(selection.getCurrentSelection(this), newItem);
+    }
+    
+    /**
+     * Removes a specified product from the inventory.
+     * 
+     * @param name Name of the product to be removed.
+     */
+    public void remove(String name) {
+        model.removeProduct(selection.getCurrentSelection(this), name);
+        view.fillInventory();
     }
 }
 

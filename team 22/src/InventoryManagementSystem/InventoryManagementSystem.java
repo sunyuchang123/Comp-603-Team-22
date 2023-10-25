@@ -3,18 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package InventoryManagementSystem;
+import Controller.InventoryController;
+import Model.InventoryModel;
+import View.PanelView;
 
 /**
  *
- * @author yucha
+ * @author yuchang Sun
  */
 public class InventoryManagementSystem {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+         // Create instances of model and view
+        InventoryModel model = InventoryModel.getInstance();
+        PanelView view = new PanelView();
+
+        // Pass the model and view instances to the controller
+        InventoryController inventoryController = new InventoryController(model, view);
+        inventoryController.systemStart();
     }
-    //testing github
 }
