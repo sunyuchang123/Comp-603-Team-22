@@ -16,17 +16,14 @@ import java.sql.ResultSet;
  * @author Junxiu Wu
  */
 public class DBmanager {
-
-    /**
-     * @return the model
-     */
   
     private static final Logger LOGGER = Logger.getLogger(DBmanager.class.getName());
 
     private InventoryModel model;
     private Connection conn;
     private Statement statement;
-   
+
+    //constructor
     public DBmanager() {
         this.model = InventoryModel.getInstance(); //singleton
         this.conn = this.model.getConnection();
@@ -37,6 +34,7 @@ public class DBmanager {
         }
     }
 
+    //check if table is exist
    private boolean isTableExist(String name) {
     try {
         DatabaseMetaData dbmd = conn.getMetaData();
@@ -54,10 +52,9 @@ public class DBmanager {
     
     return false;
 }
-    
-    //create example tables
+
+    //create table for any product
     public void createTables() {
-        //food items table
         createProductTable();
     }
 
